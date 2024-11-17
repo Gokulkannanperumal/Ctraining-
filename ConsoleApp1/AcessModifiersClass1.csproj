@@ -1,0 +1,96 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{829F8A6B-2698-4F84-B77C-BB14664759E9}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>ConsoleApp1</RootNamespace>
+    <AssemblyName>ConsoleApp1</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="arrays.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\AcessModifiersClass2\AcessModifiersClass2.csproj">
+      <Project>{16d11768-c645-44cb-ba66-01a79e3789eb}</Project>
+      <Name>AcessModifiersClass2</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\classExceptionHandeling\classExceptionHandeling.csproj">
+      <Project>{00ef0b8a-e12f-423d-a97e-b8f5ff4259cd}</Project>
+      <Name>classExceptionHandeling</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Collections\Collections.csproj">
+      <Project>{a5ac7cc0-f7bd-4b49-bdff-653d7cf162d5}</Project>
+      <Name>Collections</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CURD Operation\CURD Operation.csproj">
+      <Project>{192dc2aa-6432-4553-b461-489d96716807}</Project>
+      <Name>CURD Operation</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CustomExceptionHandeling\CustomExceptionHandeling.csproj">
+      <Project>{bbc1f189-2db2-4ec7-b2de-993ad9dcc9b1}</Project>
+      <Name>CustomExceptionHandeling</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DelegateTrainig\DelegateTrainig.csproj">
+      <Project>{d06c43e5-4d70-487d-b5cd-5ea994255f26}</Project>
+      <Name>DelegateTrainig</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DeligatesAndEvents\DeligatesAndEvents.csproj">
+      <Project>{454a672e-a9f2-4ae3-8e8b-350f5466dd52}</Project>
+      <Name>DeligatesAndEvents</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DI_Example\DI_Example.csproj">
+      <Project>{45eb4909-b0d5-41d6-b4cf-1efaf76c057e}</Project>
+      <Name>DI_Example</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Files\Log.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
